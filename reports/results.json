@@ -1,0 +1,549 @@
+{
+  "generated_at": "2026-11-20T09:48:23+00:00",
+  "assumptions": {
+    "gross_margin": 0.4,
+    "cost_per_email": 0.1,
+    "next_campaign_size": 100000,
+    "alpha": 0.05,
+    "seed": 42
+  },
+  "data": {
+    "customers": 64000,
+    "arm_counts": {
+      "Control": 21306,
+      "Mens": 21307,
+      "Womens": 21387
+    },
+    "hard_checks_passed": true,
+    "soft_check_notes": [
+      {
+        "rule": "zip_code spelled Surburban in source (corrected on load)",
+        "severity": "soft",
+        "failures": 28776
+      }
+    ]
+  },
+  "srm": {
+    "counts": {
+      "Control": 21306,
+      "Mens": 21307,
+      "Womens": 21387
+    },
+    "chi2": 0.20253125000000002,
+    "p_value": 0.9036929575604196
+  },
+  "balance": {
+    "max_abs_smd": 0.01365900039927897
+  },
+  "arm_summary": [
+    {
+      "arm": "Control",
+      "customers": 21306,
+      "visits": 2262.0,
+      "conversions": 122.0,
+      "visit_rate": 0.10616727682343002,
+      "conversion_rate": 0.005726086548390125,
+      "spend_per_customer": 0.6527893551112363,
+      "total_spend": 13908.33,
+      "spend_sd": 11.588199681271506,
+      "spend_per_buyer": 114.00270491803279
+    },
+    {
+      "arm": "Mens",
+      "customers": 21307,
+      "visits": 3894.0,
+      "conversions": 267.0,
+      "visit_rate": 0.18275684047496127,
+      "conversion_rate": 0.01253109306800582,
+      "spend_per_customer": 1.4226165110057738,
+      "total_spend": 30311.69000000002,
+      "spend_sd": 17.754205103736833,
+      "spend_per_buyer": 113.52692883895139
+    },
+    {
+      "arm": "Womens",
+      "customers": 21387,
+      "visits": 3238.0,
+      "conversions": 189.0,
+      "visit_rate": 0.151400383410483,
+      "conversion_rate": 0.008837144059475383,
+      "spend_per_customer": 1.077201571047833,
+      "total_spend": 23038.110000000004,
+      "spend_sd": 15.116106470737078,
+      "spend_per_buyer": 121.89476190476192
+    }
+  ],
+  "ate": [
+    {
+      "arm": "Mens",
+      "outcome": "visit",
+      "n_treated": 21307,
+      "n_control": 21306,
+      "treated": 0.18275684047496127,
+      "control": 0.10616727682343002,
+      "diff": 0.07658956365153125,
+      "se": 0.0033858083545245127,
+      "ci_low": 0.06995350121810838,
+      "ci_high": 0.08322562608495411,
+      "rel_lift": 0.721404616781399,
+      "p_value": 5.685165482802319e-112,
+      "boot_ci_low": 0.0699719176908701,
+      "boot_ci_high": 0.08316030239708512,
+      "rel_ci_low": 0.6401059199691183,
+      "rel_ci_high": 0.8076181935545563,
+      "p_holm": 3.4110992896813914e-111,
+      "significant": true
+    },
+    {
+      "arm": "Mens",
+      "outcome": "conversion",
+      "n_treated": 21307,
+      "n_control": 21306,
+      "treated": 0.01253109306800582,
+      "control": 0.005726086548390125,
+      "diff": 0.006805006519615695,
+      "se": 0.000920851175531638,
+      "ci_low": 0.005000171380452313,
+      "ci_high": 0.008609841658779076,
+      "rel_lift": 1.188421876286328,
+      "p_value": 1.5232235005955425e-13,
+      "boot_ci_low": 0.005067256747518854,
+      "boot_ci_high": 0.008635419867202577,
+      "rel_ci_low": 0.7881096330983776,
+      "rel_ci_high": 1.7477109229602477,
+      "p_holm": 6.09289400238217e-13,
+      "significant": true
+    },
+    {
+      "arm": "Mens",
+      "outcome": "spend",
+      "n_treated": 21307,
+      "n_control": 21306,
+      "treated": 1.422616511005773,
+      "control": 0.6527893551112361,
+      "diff": 0.7698271558945368,
+      "se": 0.14524656024868676,
+      "ci_low": 0.4851397325684076,
+      "ci_high": 1.0545145792206658,
+      "rel_lift": 1.1792887703620063,
+      "p_value": 1.1638149682254823e-07,
+      "boot_ci_low": 0.4995901891833129,
+      "boot_ci_high": 1.065169732413577,
+      "rel_ci_low": 0.6619058998817827,
+      "rel_ci_high": 2.0073306565627775,
+      "p_holm": 3.4914449046764466e-07,
+      "significant": true
+    },
+    {
+      "arm": "Womens",
+      "outcome": "visit",
+      "n_treated": 21387,
+      "n_control": 21306,
+      "treated": 0.151400383410483,
+      "control": 0.10616727682343002,
+      "diff": 0.045233106587052985,
+      "se": 0.0032343863583279126,
+      "ci_low": 0.03889382581264261,
+      "ci_high": 0.05157238736146336,
+      "rel_lift": 0.4260550702669102,
+      "p_value": 3.1824031593349214e-44,
+      "boot_ci_low": 0.039098535731740484,
+      "boot_ci_high": 0.05146659180877927,
+      "rel_ci_low": 0.3590939814027044,
+      "rel_ci_high": 0.4968061753958522,
+      "p_holm": 1.5912015796674606e-43,
+      "significant": true
+    },
+    {
+      "arm": "Womens",
+      "outcome": "conversion",
+      "n_treated": 21387,
+      "n_control": 21306,
+      "treated": 0.008837144059475383,
+      "control": 0.005726086548390125,
+      "diff": 0.003111057511085258,
+      "se": 0.0008226578153482761,
+      "ci_low": 0.0014986778214022348,
+      "ci_high": 0.004723437200768281,
+      "rel_lift": 0.5433130436982172,
+      "p_value": 0.00015710512910668448,
+      "boot_ci_low": 0.0015200535222505132,
+      "boot_ci_high": 0.004798451679069743,
+      "rel_ci_low": 0.23972258517481912,
+      "rel_ci_high": 0.9729056762275679,
+      "p_holm": 0.00031421025821336897,
+      "significant": true
+    },
+    {
+      "arm": "Womens",
+      "outcome": "spend",
+      "n_treated": 21387,
+      "n_control": 21306,
+      "treated": 1.0772015710478329,
+      "control": 0.6527893551112361,
+      "diff": 0.4244122159365967,
+      "se": 0.13033285852919116,
+      "ci_low": 0.16895678988377877,
+      "ci_high": 0.6798676419894147,
+      "rel_lift": 0.6501518638646863,
+      "p_value": 0.0011293971023632501,
+      "boot_ci_low": 0.17728767514083865,
+      "boot_ci_high": 0.6880678800386784,
+      "rel_ci_low": 0.23094930272768538,
+      "rel_ci_high": 1.284783661833657,
+      "p_holm": 0.0011293971023632501,
+      "significant": true
+    }
+  ],
+  "cuped": [
+    {
+      "arm": "Mens",
+      "outcome": "visit",
+      "theta": 9.001123849458964e-05,
+      "diff_raw": 0.07658956365153125,
+      "se_raw": 0.0033858878117283653,
+      "diff_cuped": 0.07641374670919525,
+      "se_cuped": 0.003378360718955716,
+      "ci_low_cuped": 0.06979208395828988,
+      "ci_high_cuped": 0.08303540946010061,
+      "variance_reduction": 0.004441213964240798
+    },
+    {
+      "arm": "Womens",
+      "outcome": "visit",
+      "theta": 9.001123849458964e-05,
+      "diff_raw": 0.045233106587052985,
+      "se_raw": 0.003234462099090751,
+      "diff_cuped": 0.045084229778491094,
+      "se_cuped": 0.003228023882806916,
+      "ci_low_cuped": 0.038757235984049884,
+      "ci_high_cuped": 0.051411223572932305,
+      "variance_reduction": 0.003977049928334697
+    },
+    {
+      "arm": "Mens",
+      "outcome": "conversion",
+      "theta": 1.085963857389154e-05,
+      "diff_raw": 0.006805006519615695,
+      "se_raw": 0.0009208727857351216,
+      "diff_cuped": 0.006783794630068697,
+      "se_cuped": 0.0009204671948262057,
+      "ci_low_cuped": 0.004979653840136097,
+      "ci_high_cuped": 0.008587935420001297,
+      "variance_reduction": 0.0008806897013207138
+    },
+    {
+      "arm": "Womens",
+      "outcome": "conversion",
+      "theta": 1.085963857389154e-05,
+      "diff_raw": 0.003111057511085258,
+      "se_raw": 0.0008226770775551195,
+      "diff_cuped": 0.003093095883625662,
+      "se_cuped": 0.0008224168061077566,
+      "ci_low_cuped": 0.0014811408807123515,
+      "ci_high_cuped": 0.004705050886538972,
+      "variance_reduction": 0.0006326425841920447
+    },
+    {
+      "arm": "Mens",
+      "outcome": "spend",
+      "theta": 0.0012754870330541786,
+      "diff_raw": 0.7698271558945368,
+      "se_raw": 0.14524656024868676,
+      "diff_cuped": 0.7673357755525777,
+      "se_cuped": 0.14521511383647107,
+      "ci_low_cuped": 0.4827099896074842,
+      "ci_high_cuped": 1.0519615614976712,
+      "variance_reduction": 0.000432960450562736
+    },
+    {
+      "arm": "Womens",
+      "outcome": "spend",
+      "theta": 0.0012754870330541786,
+      "diff_raw": 0.4244122159365967,
+      "se_raw": 0.13033285852919116,
+      "diff_cuped": 0.42230258560577283,
+      "se_cuped": 0.13030960997747149,
+      "ci_low_cuped": 0.16689272811304778,
+      "ci_high_cuped": 0.6777124430984979,
+      "variance_reduction": 0.00035672475020687155
+    }
+  ],
+  "regression_adjusted": [
+    {
+      "arm": "Mens",
+      "outcome": "visit",
+      "diff_adj": 0.07601687159234788,
+      "se_adj": 0.003338027635547021,
+      "ci_low_adj": 0.06947445764727632,
+      "ci_high_adj": 0.08255928553741944,
+      "p_adj": 8.49478316855445e-115
+    },
+    {
+      "arm": "Womens",
+      "outcome": "visit",
+      "diff_adj": 0.04548336619991209,
+      "se_adj": 0.003192510946262408,
+      "ci_low_adj": 0.039226159724987886,
+      "ci_high_adj": 0.051740572674836297,
+      "p_adj": 4.6866452244325074e-46
+    },
+    {
+      "arm": "Mens",
+      "outcome": "conversion",
+      "diff_adj": 0.006767758874162433,
+      "se_adj": 0.0009197180012816108,
+      "ci_low_adj": 0.004965144715717313,
+      "ci_high_adj": 0.008570373032607553,
+      "p_adj": 1.8596711185551388e-13
+    },
+    {
+      "arm": "Womens",
+      "outcome": "conversion",
+      "diff_adj": 0.0031189366213459965,
+      "se_adj": 0.00082194589600509,
+      "ci_low_adj": 0.0015079522679355153,
+      "ci_high_adj": 0.004729920974756477,
+      "p_adj": 0.000147895648881952
+    },
+    {
+      "arm": "Mens",
+      "outcome": "spend",
+      "diff_adj": 0.7664295619122407,
+      "se_adj": 0.14510368806715437,
+      "ci_low_adj": 0.4820315592766837,
+      "ci_high_adj": 1.0508275645477976,
+      "p_adj": 1.2782023720106927e-07
+    },
+    {
+      "arm": "Womens",
+      "outcome": "spend",
+      "diff_adj": 0.42576995890482433,
+      "se_adj": 0.13025892639336145,
+      "ci_low_adj": 0.17046715450898203,
+      "ci_high_adj": 0.6810727633006666,
+      "p_adj": 0.0010806446433877157
+    }
+  ],
+  "power": [
+    {
+      "outcome": "visit",
+      "arm": "Mens",
+      "n_per_arm": 21306,
+      "mde_80pct_power": 0.008361637539166614,
+      "observed_diff": 0.07658956365153125,
+      "n_needed_per_arm": 330.0
+    },
+    {
+      "outcome": "visit",
+      "arm": "Womens",
+      "n_per_arm": 21306,
+      "mde_80pct_power": 0.008361637539166614,
+      "observed_diff": 0.045233106587052985,
+      "n_needed_per_arm": 860.0
+    },
+    {
+      "outcome": "conversion",
+      "arm": "Mens",
+      "n_per_arm": 21306,
+      "mde_80pct_power": 0.002048093835095838,
+      "observed_diff": 0.006805006519615695,
+      "n_needed_per_arm": 3066.0
+    },
+    {
+      "outcome": "conversion",
+      "arm": "Womens",
+      "n_per_arm": 21306,
+      "mde_80pct_power": 0.002048093835095838,
+      "observed_diff": 0.003111057511085258,
+      "n_needed_per_arm": 11723.0
+    },
+    {
+      "outcome": "spend",
+      "arm": "Mens",
+      "n_per_arm": 21306,
+      "mde_80pct_power": 0.3145457661706895,
+      "observed_diff": 0.7698271558945368,
+      "n_needed_per_arm": null
+    },
+    {
+      "outcome": "spend",
+      "arm": "Womens",
+      "n_per_arm": 21306,
+      "mde_80pct_power": 0.3145457661706895,
+      "observed_diff": 0.4244122159365967,
+      "n_needed_per_arm": null
+    }
+  ],
+  "uplift": {
+    "best_model": {
+      "Mens": "Class transformation (logistic)",
+      "Womens": "Class transformation (logistic)"
+    },
+    "qini_scores": [
+      {
+        "arm": "Mens",
+        "model": "T-learner (LightGBM)",
+        "split": "validation",
+        "qini_coefficient": -0.0008908847383993154
+      },
+      {
+        "arm": "Mens",
+        "model": "T-learner (LightGBM)",
+        "split": "test",
+        "qini_coefficient": 0.0007283297841220554
+      },
+      {
+        "arm": "Mens",
+        "model": "Class transformation (logistic)",
+        "split": "validation",
+        "qini_coefficient": 0.0029461926880561275
+      },
+      {
+        "arm": "Mens",
+        "model": "Class transformation (logistic)",
+        "split": "test",
+        "qini_coefficient": 0.00015728533963706046
+      },
+      {
+        "arm": "Womens",
+        "model": "T-learner (LightGBM)",
+        "split": "validation",
+        "qini_coefficient": 0.003930792102565892
+      },
+      {
+        "arm": "Womens",
+        "model": "T-learner (LightGBM)",
+        "split": "test",
+        "qini_coefficient": 0.008642709494688115
+      },
+      {
+        "arm": "Womens",
+        "model": "Class transformation (logistic)",
+        "split": "validation",
+        "qini_coefficient": 0.008302517483950075
+      },
+      {
+        "arm": "Womens",
+        "model": "Class transformation (logistic)",
+        "split": "test",
+        "qini_coefficient": 0.009694723623880673
+      }
+    ],
+    "threshold": 0.023261604160285332,
+    "policy_mix": {
+      "Mens": 0.7996875,
+      "Womens": 0.2003125
+    },
+    "policy_value": [
+      {
+        "policy": "No e-mail",
+        "policy_group": "Baseline",
+        "profit_per_customer": 0.31660625000000003,
+        "ci_low": 0.2065383125,
+        "ci_high": 0.44015685937500004,
+        "share_mailed": 0.0
+      },
+      {
+        "policy": "Mens e-mail to everyone",
+        "policy_group": "Baseline",
+        "profit_per_customer": 0.5036693750000001,
+        "ci_low": 0.3436476875,
+        "ci_high": 0.6981297031250001,
+        "share_mailed": 1.0
+      },
+      {
+        "policy": "Womens e-mail to everyone",
+        "policy_group": "Baseline",
+        "profit_per_customer": 0.33197437500000004,
+        "ci_low": 0.19193543750000003,
+        "ci_high": 0.48865262500000006,
+        "share_mailed": 1.0
+      },
+      {
+        "policy": "Model policy",
+        "policy_group": "Model policy",
+        "profit_per_customer": 0.45713000000000004,
+        "ci_low": 0.307442,
+        "ci_high": 0.6273317968750001,
+        "share_mailed": 1.0
+      }
+    ],
+    "model_vs_best_baseline_per_1000": -46.53937500000005,
+    "best_baseline": "Mens e-mail to everyone",
+    "split_sizes": {
+      "fit": 33600,
+      "validation": 11200,
+      "test": 19200
+    }
+  },
+  "pnl": [
+    {
+      "arm": "Mens",
+      "scenario": "estimate",
+      "incremental_spend_per_customer": 0.7698271558945368,
+      "gross_profit_per_customer": 0.30793086235781475,
+      "net_profit_per_customer": 0.20793086235781474,
+      "net_profit_next_campaign": 20793.086235781473,
+      "roi": 2.0793086235781475,
+      "break_even_cost_per_email": 0.30793086235781475
+    },
+    {
+      "arm": "Mens",
+      "scenario": "ci_low",
+      "incremental_spend_per_customer": 0.4851397325684076,
+      "gross_profit_per_customer": 0.19405589302736304,
+      "net_profit_per_customer": 0.09405589302736303,
+      "net_profit_next_campaign": 9405.589302736304,
+      "roi": 0.9405589302736302,
+      "break_even_cost_per_email": 0.19405589302736304
+    },
+    {
+      "arm": "Mens",
+      "scenario": "ci_high",
+      "incremental_spend_per_customer": 1.0545145792206658,
+      "gross_profit_per_customer": 0.42180583168826635,
+      "net_profit_per_customer": 0.3218058316882664,
+      "net_profit_next_campaign": 32180.583168826637,
+      "roi": 3.2180583168826637,
+      "break_even_cost_per_email": 0.42180583168826635
+    },
+    {
+      "arm": "Womens",
+      "scenario": "estimate",
+      "incremental_spend_per_customer": 0.4244122159365967,
+      "gross_profit_per_customer": 0.1697648863746387,
+      "net_profit_per_customer": 0.06976488637463871,
+      "net_profit_next_campaign": 6976.488637463871,
+      "roi": 0.697648863746387,
+      "break_even_cost_per_email": 0.1697648863746387
+    },
+    {
+      "arm": "Womens",
+      "scenario": "ci_low",
+      "incremental_spend_per_customer": 0.16895678988377877,
+      "gross_profit_per_customer": 0.06758271595351151,
+      "net_profit_per_customer": -0.0324172840464885,
+      "net_profit_next_campaign": -3241.72840464885,
+      "roi": -0.324172840464885,
+      "break_even_cost_per_email": 0.06758271595351151
+    },
+    {
+      "arm": "Womens",
+      "scenario": "ci_high",
+      "incremental_spend_per_customer": 0.6798676419894147,
+      "gross_profit_per_customer": 0.2719470567957659,
+      "net_profit_per_customer": 0.1719470567957659,
+      "net_profit_next_campaign": 17194.705679576593,
+      "roi": 1.719470567957659,
+      "break_even_cost_per_email": 0.2719470567957659
+    }
+  ],
+  "figures": [
+    "reports/figures/01_lift_with_ci.png",
+    "reports/figures/02_covariate_balance.png",
+    "reports/figures/03_segment_visit_lift.png",
+    "reports/figures/04_qini_curves.png",
+    "reports/figures/05_policy_profit.png"
+  ]
+}

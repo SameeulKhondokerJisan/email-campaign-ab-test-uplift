@@ -1,0 +1,9 @@
+arm,model,split,qini_coefficient
+Mens,T-learner (LightGBM),validation,-0.0008908847383993154
+Mens,T-learner (LightGBM),test,0.0007283297841220554
+Mens,Class transformation (logistic),validation,0.0029461926880561275
+Mens,Class transformation (logistic),test,0.00015728533963706046
+Womens,T-learner (LightGBM),validation,0.003930792102565892
+Womens,T-learner (LightGBM),test,0.008642709494688115
+Womens,Class transformation (logistic),validation,0.008302517483950075
+Womens,Class transformation (logistic),test,0.009694723623880673

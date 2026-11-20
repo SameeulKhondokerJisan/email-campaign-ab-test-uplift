@@ -1,0 +1,12 @@
+rule,severity,failures
+"row count equals 64,000",hard,0
+no missing values in any column,hard,0
+arm is one of Mens / Womens / Control,hard,0
+binary flags are 0 or 1,hard,0
+recency between 1 and 12 months,hard,0
+spend is not negative,hard,0
+spend > 0 only when converted,soft,0
+converted customers have spend > 0,soft,0
+conversion only after a visit,soft,0
+customer bought mens or womens last year,soft,0
+zip_code spelled Surburban in source (corrected on load),soft,28776
