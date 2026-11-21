@@ -100,3 +100,7 @@ The raw CSV is downloaded by `src/download_data.py` and is not stored in this re
 * Outcomes cover two weeks after the send, so longer-term effects (unsubscribes, later purchases) are not measured.
 * Spend is zero for most customers, so spend CIs are wide; bootstrap and Welch intervals agree closely.
 * Segment results are exploratory (many comparisons); act on them only after a confirmatory test.
+
+## License
+
+Code, SQL and documentation are released under the [MIT License](LICENSE). The data is not covered by this license: it belongs to the publishers listed under Data and remains under their terms.
